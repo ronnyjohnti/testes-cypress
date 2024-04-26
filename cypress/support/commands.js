@@ -23,10 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
-Cypress.Commands.add('loginAsSuperAdmin', () => {
-    cy.request({
-        method: 'GET',
-        url: `/autenticacao/fakeLogin?fake_authentication_user_id=${Cypress.env('USER_ID')}`,
-    })
-})
